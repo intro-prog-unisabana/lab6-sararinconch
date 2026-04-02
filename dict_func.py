@@ -12,9 +12,9 @@ def employee_print(información):
     print("Name:", nombre)
     print("Salary:", salario)
     print("Role:", rol)
-    información.pop("Name")
-    información.pop("Salary")
-    información.pop("Role")
+    información.pop("Name", "N/A")
+    información.pop("Salary", "N/A")
+    información.pop("Role", "N/A")
     if not información:
         print("No other info!")
     else:
