@@ -12,7 +12,7 @@ def add_fruit(inventory):
     else:
         stock = input(f"Enter stock for {fruit}: ")
         # Algo está mal con la sintaxis aquí...
-        inventory == int(stock)
+        inventory[fruit] = int(stock)
         print(f"{fruit} added with stock {stock}.\n")
 
 def update_stock(inventory):
@@ -21,7 +21,7 @@ def update_stock(inventory):
     if fruit in inventory:
         amount = input(f"Enter amount to add to {fruit}'s stock: ")
         # ¿Es esta operación válida?
-        inventory += amount
+        inventory[fruit] += int(amount)
         print(f"{fruit} stock increased by {amount}.\n")
     else:
         print(f"{fruit} is not in inventory. Use option 2 to add it.\n")
