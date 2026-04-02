@@ -12,12 +12,11 @@ def employee_print(información):
     print("Name:", nombre)
     print("Salary:", salario)
     print("Role:", rol)
-    del información["Name"]
-    del información["Salary"]
-    del información["Role"]
-    nuevo = información
-    if not nuevo:
+    información.pop("Name")
+    información.pop("Salary")
+    información.pop("Role")
+    if not información:
         print("No other info!")
     else:
-        for key, value in nuevo.items():
+        for key, value in información.items():
             print(f"{key}: {value}")
