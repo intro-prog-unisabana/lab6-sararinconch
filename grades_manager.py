@@ -31,6 +31,7 @@ def add_student(student_grades = {}):
         sub_gra = (input("Enter subject and grade (or 'exit' to finish):")).lower().strip()
         estudiante[materia] = nota
         student_grades[nombre_tit] = estudiante
+        print(f"Student {nombre_tit} successfully added to the grades management system.")
     return student_grades
 
 
