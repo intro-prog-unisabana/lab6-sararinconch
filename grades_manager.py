@@ -34,6 +34,19 @@ def add_student(student_grades = {}):
         print(f"Student {nombre_tit} successfully added to the grades management system.")
     return student_grades
 
+def get_students(student_grades, keys):
+    estudiantes = {}
+    for estudiante_buscado in keys:
+        estudiante_e = False
+        for estudiante in student_grades:
+            if estudiante_buscado.lower() == estudiante.lower():
+                estudiantes[estudiante] = student_grades[estudiante]
+                estudiante_e = True
+                break
+        if not estudiante_e:
+            print(f"{estudiante_e.title()} not found!")
+    return estudiantes
+
 
 
 
