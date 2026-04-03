@@ -47,6 +47,20 @@ def get_students(student_grades, keys):
             print(f"{estudiante_buscado.title()} not found!")
     return estudiantes
 
+def avg_by_student(student_grades, keys = None):
+    if keys == None:
+        for key, value in student_grades.items():
+            value_s = value.values()
+            promedio = sum(value_s)/len(value_s)
+            promedio_r = round(promedio, 1)
+            print(f"{key}: {promedio_r}")
+    else:
+        seleccionados = get_students(student_grades, keys)
+        for key, value in seleccionados.items():
+            value_s = value.values()
+            promedio = sum(value_s) / len(value_s)
+            promedio_r = round(promedio, 1)
+            print(f"{key}: {promedio_r}")
 
 
 
