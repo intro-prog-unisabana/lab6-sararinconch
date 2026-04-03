@@ -44,7 +44,7 @@ def get_students(student_grades, keys):
                 estudiante_e = True
                 break
         if not estudiante_e:
-            print(f"{estudiante_e.title()} not found!")
+            print(f"{estudiante_buscado.title()} not found!")
     return estudiantes
 
 
