@@ -4,14 +4,12 @@ temperatures = {
     "sensor_3": 78.8,
     "sensor_4": 92.3
 }
-threshold = 88
 
-def trigger_alarm(temperatures, threshold):
+def trigger_alarm(temperatures, threshold = 80):
     lista = []
     for key, value in temperatures.items():
         if value > threshold:
             lista.append(key)
     return lista
 
-resultado = trigger_alarm(temperatures, threshold)
-print(resultado)
+
