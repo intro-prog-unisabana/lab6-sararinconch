@@ -13,4 +13,5 @@ def trigger_alarm(temperatures, threshold):
             lista.append(key)
     return lista
 
-
+resultado = trigger_alarm(temperatures, threshold)
+print(resultado)
