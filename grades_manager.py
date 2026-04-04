@@ -20,18 +20,18 @@ def initialize_dict(student_name, subject_grades):
     return new_dict
 
 def add_student(student_grades = {}):
-    nombre = input("Enter student name:")
+    nombre = input("Enter student name:\n")
     nombre_tit = nombre.title()
-    sub_gra = (input("Enter subject and grade (or 'exit' to finish):")).lower().strip()
+    sub_gra = (input("Enter subject and grade (or 'exit' to finish):\n")).lower().strip()
     estudiante = {}
     while sub_gra != "exit":
         posición_coma = sub_gra.find(",")
         materia = (sub_gra[0:posición_coma]).title()
         nota = float(sub_gra[posición_coma+1:])
-        sub_gra = (input("Enter subject and grade (or 'exit' to finish):")).lower().strip()
+        sub_gra = (input("Enter subject and grade (or 'exit' to finish):\n")).lower().strip()
         estudiante[materia] = nota
         student_grades[nombre_tit] = estudiante
-        print(f"Student {nombre_tit} successfully added to the grades management system.")
+        print(f"Student {nombre_tit} successfully added to the grades management system.\n")
     return student_grades
 
 def get_students(student_grades, keys):
