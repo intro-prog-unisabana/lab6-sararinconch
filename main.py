@@ -29,6 +29,9 @@ while True:
                 print("Invalid option selected!")
                 opciones = input("Select an option:\na. Display all students\nb. Display selected students\n")
             break
-    else:
+    elif menú_principal == "3":
         print("Goodbye!")
+        break
+    else:
+        print("Invalid option selected!")
     
